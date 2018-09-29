@@ -12,6 +12,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 #### /api/createStudentAccount
 - Creates a student account  
 - **input**: name, email, password, password_confirmaion
+- **output**: [user data]
 
 #### /api/login
 - Returns the access token for student
@@ -32,3 +33,23 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - Invalidates the current token for the student   
 - **input**: token  
 - **output**: message
+
+## Rooms 
+
+#### /api/getAllRooms
+- Returns all the rooms in the dorm
+- **input**: [nothing]     
+- **output**: [list of the rooms]
+
+#### /api/getStudentRoom
+- Returns the current from for the logged in student
+- **input**: token     
+- **output**: id, room_number, building, wing, floor, student_id
+
+#### /api/setStudentRoom
+- Assigns a student to available room ( room must not be assigned to anther student + student should have no room )
+- **input**: token     
+- **output**: id, room_number, building, wing, floor, student_id
+
+
+
