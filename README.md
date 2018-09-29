@@ -48,7 +48,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 
 #### /api/setStudentRoom
 - Assigns a student to available room ( room must not be assigned to anther student + student should have no room )
-- **input**: token     
+- **input**: token, room_id     
 - **output**: id, room_number, building, wing, floor, student_id
 
 
