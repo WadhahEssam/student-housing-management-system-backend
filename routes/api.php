@@ -1,13 +1,8 @@
 <?php
 
-Route::group([
-    'prefix' => 'auth'
-], function () {
-    Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
-});
-
+Route::post('/login', 'AuthController@login');
+Route::post('/logout', 'AuthController@logout');
+Route::post('/refresh', 'AuthController@refresh');
+Route::post('/getInfo', 'AuthController@getInfo');
 Route::post('/test' , 'Controller@test' ) ;
-Route::post('/signup' , 'Controller@signup' ) ;
+Route::post('/createStudentAccount' , 'Controller@createStudentAccount' ) ;

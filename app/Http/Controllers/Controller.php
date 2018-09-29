@@ -24,7 +24,7 @@ class Controller extends BaseController
         return $newUser ;
     }
 
-    public function signup ( Request $request ) {
+    public function createStudentAccount ( Request $request ) {
         $newUser = new User () ;
         $newUser->name = $request->name ;
         $newUser->password = Hash::make($request->password) ;
