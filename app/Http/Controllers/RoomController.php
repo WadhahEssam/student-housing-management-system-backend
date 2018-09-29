@@ -11,7 +11,7 @@ class RoomController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login']]);
+        $this->middleware('auth:api', ['except' => ['getAllRooms']]);
     }
 
     public function getAllRooms() {
