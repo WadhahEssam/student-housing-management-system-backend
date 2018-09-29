@@ -18,7 +18,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: email, password
 - **output**: token
 
-#### /api/me
+#### /api/getInfo
 - Returns information about the student   
 - **input**: token  
 - **output**: id, name, emaill, created_at  
