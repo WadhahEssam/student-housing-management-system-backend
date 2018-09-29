@@ -14,11 +14,11 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: name, email, password, password_confirmaion
 
 #### /api/login
-- Returns the access token for student  
-- **input**: email, password  
-- **output**: token  
+- Returns the access token for student
+- **input**: email, password
+- **output**: token
 
-- #### /api/me
+#### /api/me
 Returns information about the student   
 **input**: token  
 **output**: id, name, emaill, created_at  
