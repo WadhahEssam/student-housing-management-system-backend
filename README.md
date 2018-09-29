@@ -24,7 +24,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **output**: id, name, emaill, created_at  
 
 #### /api/refresh
-- Creates a new token for the current student, **IMPORTANT : last token won't be valid any more **
+- Creates a new token for the current student, **IMPORTANT** : last token won't be valid any more 
 - **input**: token  
 - **output**: token
 
