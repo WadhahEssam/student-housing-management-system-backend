@@ -15,21 +15,21 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function test () {
-        $newUser = new User () ;
-        $newUser->name = "wadah" ;
-        $newUser->password = Hash::make("112233") ;
-        $newUser->email = "wadah-wleed@hotmail.com" ;
+    public function test() {
+        $newUser = new User() ;
+        $newUser->name = "wadah";
+        $newUser->password = Hash::make("112233");
+        $newUser->email = "wadah-wleed@hotmail.com";
         $newUser->save() ;
         return $newUser ;
     }
 
-    public function createStudentAccount ( Request $request ) {
-        $newUser = new User () ;
-        $newUser->name = $request->name ;
-        $newUser->password = Hash::make($request->password) ;
-        $newUser->email = $request->email ;
-        $newUser->save() ;
-        return $newUser ;
+    public function createStudentAccount( Request $request ) {
+        $newUser = new User() ;
+        $newUser->name = $request->name;
+        $newUser->password = Hash::make($request->password);
+        $newUser->email = $request->email;
+        $newUser->save();
+        return $newUser;
     }
 }

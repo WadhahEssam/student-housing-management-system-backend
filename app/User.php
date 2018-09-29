@@ -29,6 +29,10 @@ class User extends Authenticatable implements JWTSubject
         'password', 'remember_token',
     ];
 
+    public function room() {
+        return $this->hasOne('App\Room', 'student_id', 'id');
+    }
+
     public function getJWTIdentifier()
     {
         return $this->getKey();
