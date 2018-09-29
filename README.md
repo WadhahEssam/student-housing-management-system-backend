@@ -5,9 +5,7 @@ This API was created using Laravl & Laravel-JWT
 
 
 # API 
-
-
-
+Here are all the API functions with their inputs and output and what they exaclty do
 
 ## Authentication 
 
