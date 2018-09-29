@@ -4,7 +4,7 @@ This API was created using Laravl & Laravel-JWT
 
 # API 
 
--## Authentication 
+## Authentication 
 
 - ### /api/createStudentAccount
 Creates a student account  
