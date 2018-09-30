@@ -25,7 +25,6 @@ class RoomController extends Controller
     public function setStudentRoom(Request $request) {
         $room_id = $request->room_id;
         $student_id = auth()->user()->id;
-        // check weather the room is registered to anther student
         if(isset(Room::find($room_id)->student_id)) {
             return 'room is already registered to anther student';
         }
@@ -34,6 +33,17 @@ class RoomController extends Controller
         }
         $updatedRoom = Room::find($room_id);
         $updatedRoom->update(['student_id'=> $student_id]);
+        return $updatedRoom;
+    }
+
+    // not finished
+    public function changeStudentRoom(Request $request) {
+        $room_id = $request->room_id;
+        $student_id = auth()->user()->id;
+        if(isset(Room::find($room_id)->student_id)) {
+            return 'room is already registered to anther student';
+        }
+        $updatedRoom = Room::find($room_id);
         return $updatedRoom;
     }
 

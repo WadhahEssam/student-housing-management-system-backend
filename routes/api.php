@@ -12,3 +12,4 @@ Route::post('/createStudentAccount', 'Controller@createStudentAccount' ) ;
 Route::post('/getStudentRoom', 'RoomController@getStudentRoom');
 Route::post('/setStudentRoom', 'RoomController@setStudentRoom');
 Route::post('/getAllRooms', 'RoomController@getAllRooms');
+Route::post('/changeStudentRoom', 'RoomController@changeStudentRoom');
