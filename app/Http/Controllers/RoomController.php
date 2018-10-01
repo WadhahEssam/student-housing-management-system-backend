@@ -26,7 +26,7 @@ class RoomController extends Controller
         $room_id = $request->room_id;
         $student_id = auth()->user()->id;
         if(isset(Room::find($room_id)->student_id)) {
-            return 'room is already registered to anther student';
+            return 'room is already registered to another student';
         }
         if(isset(User::find($student_id)->room)) {
             return 'student already has a room';
@@ -36,15 +36,29 @@ class RoomController extends Controller
         return $updatedRoom;
     }
 
-    // not finished
     public function changeStudentRoom(Request $request) {
         $room_id = $request->room_id;
         $student_id = auth()->user()->id;
         if(isset(Room::find($room_id)->student_id)) {
-            return 'room is already registered to anther student';
+            return 'room is already registered to another student';
+        }
+        if(!isset(User::find($student_id)->room)) {
+            return 'student does not have a room';
         }
         $updatedRoom = Room::find($room_id);
+        $oldRoom = Room::find(auth()->user()->room->id);
+        $updatedRoom->update(['student_id'=> $student_id]);
+        $oldRoom->update(['student_id'=> null]);
         return $updatedRoom;
+    }
+
+    public function clearStudentRoom(Request $request) {
+        if(!isset(auth()->user()->room)) {
+            return 'student does not have a room yet';
+        }
+        $room_id =auth()->user()->room->id;
+        Room::find($room_id)->update(['student_id'=> null]);
+        return 'room number ' . auth()->user()->room->id . ' is cleared';
     }
 
 }
