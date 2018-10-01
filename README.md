@@ -61,4 +61,14 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: token,      
 - **output**: id, room_number, building, wing, floor, student_id ( of the cleared room ) 
 
+#### /api/getRoomInfo
+- Returns information about the given room 
+- **input**: room_id,      
+- **output**: id, room_number, building, wing, floor, student_id 
+
+#### /api/getRoomID
+- Returns the id if of the room given its building and number
+- **input**: room_number, building   
+- **output**: room_id
+
 
