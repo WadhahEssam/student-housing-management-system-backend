@@ -52,10 +52,10 @@ class DatabaseSeeder extends Seeder
 
     private function addRoom($building, $floor, $wing, $room) {
         DB::table('rooms')->insert([
-            'room_number'=> $building,
-            'building'=> $floor,
-            'floor'=> $wing,
-            'wing'=> $this->getRoomNumber($floor, $room),
+            'room_number'=> $this->getRoomNumber($floor, $room),
+            'building'=> $building,
+            'floor'=> $floor,
+            'wing'=> $wing,
             ]);
     }
 

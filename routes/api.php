@@ -14,4 +14,5 @@ Route::post('/setStudentRoom', 'RoomController@setStudentRoom');
 Route::post('/getAllRooms', 'RoomController@getAllRooms');
 Route::post('/changeStudentRoom', 'RoomController@changeStudentRoom');
 Route::post('/clearStudentRoom', 'RoomController@clearStudentRoom');
-
+Route::post('/getRoomInfo', 'RoomController@getRoomInfo');
+Route::post('/getRoomID', 'RoomController@getRoomID');

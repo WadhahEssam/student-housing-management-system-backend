@@ -11,11 +11,11 @@ class RoomController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['getAllRooms']]);
+        $this->middleware('auth:api', ['except' => ['getAllRooms', 'getRoomID', 'getRoomInfo']]);
     }
 
     public function getAllRooms() {
-        return Room::get()->all();
+        return Room::get(['id', 'building', 'floor', 'wing', 'room_number'])->all();
     }
 
     public function getStudentRoom() {
@@ -60,6 +60,19 @@ class RoomController extends Controller
         $clearedRoom = Room::find($room_id);
         $clearedRoom->update(['student_id'=> null]);
         return $clearedRoom;
+    }
+
+    public function getRoomInfo(Request $request) {
+        return Room::find($request->room_id);
+    }
+
+    public function getRoomID(Request $request) {
+        return $request->building;
+        return Room::where([
+                ['building','=',$request->building],
+                ['room_number','=',$request->room_number],
+            ])
+            ->get()->all();
     }
 
 }
