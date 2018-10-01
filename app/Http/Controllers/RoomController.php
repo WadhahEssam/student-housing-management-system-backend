@@ -57,8 +57,9 @@ class RoomController extends Controller
             return 'student does not have a room yet';
         }
         $room_id =auth()->user()->room->id;
-        Room::find($room_id)->update(['student_id'=> null]);
-        return 'room number ' . auth()->user()->room->id . ' is cleared';
+        $clearedRoom = Room::find($room_id);
+        $clearedRoom->update(['student_id'=> null]);
+        return $clearedRoom;
     }
 
 }
