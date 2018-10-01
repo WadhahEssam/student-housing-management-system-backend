@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
 
     private function fillRooms() {
         // looping throw the buildings
-        for($b = 1; $b <= 10; $b++) {
+        for($b = 1; $b <= 31; $b++) {
             // looping throw the floors
             for($f = 1; $f <= 5; $f++) {
                 // if floor is 5
@@ -60,7 +60,12 @@ class DatabaseSeeder extends Seeder
     }
 
     private function getRoomNumber($floor, $room) {
-        return $room;
+        if($room > 9) {
+            return ''.$floor.''.$room;
+        }
+        else {
+            return ''.$floor.'0'.$room;
+        }
     }
 
     private function fillStudents() {
