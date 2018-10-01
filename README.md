@@ -42,7 +42,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **output**: [list of the rooms]
 
 #### /api/getStudentRoom
-- Returns the current from for the logged in student
+- Returns the current room from for the logged in student
 - **input**: token     
 - **output**: id, room_number, building, wing, floor, student_id
 
