@@ -51,5 +51,14 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: token, room_id     
 - **output**: id, room_number, building, wing, floor, student_id
 
+#### /api/changeStudentRoom
+- Assigns a student to a new room ( student should have a room, and the room must be empty )
+- **input**: token, room_id     
+- **output**: id, room_number, building, wing, floor, student_id ( of the new room ) 
+
+#### /api/clearStudentRoom
+- Removes a student from a room ( student should have a room ) 
+- **input**: token,      
+- **output**: id, room_number, building, wing, floor, student_id ( of the cleared room ) 
 
 
