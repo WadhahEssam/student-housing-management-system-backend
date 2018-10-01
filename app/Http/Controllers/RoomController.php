@@ -67,12 +67,11 @@ class RoomController extends Controller
     }
 
     public function getRoomID(Request $request) {
-        return $request->building;
         return Room::where([
                 ['building','=',$request->building],
                 ['room_number','=',$request->room_number],
             ])
-            ->get()->all();
+            ->get()->first()->id;
     }
 
 }
