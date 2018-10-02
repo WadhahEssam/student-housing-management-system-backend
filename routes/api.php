@@ -20,3 +20,5 @@ Route::post('/getRoomsForWing', 'RoomController@getRoomsForWing');
 Route::post('/getRoomsCount', 'RoomController@getRoomsCount');
 Route::post('/getAvailableRoomsCount', 'RoomController@getAvailableRoomsCount');
 Route::post('/getStudentForRoom', 'RoomController@getStudentForRoom');
+
+// Complaints
