@@ -71,4 +71,8 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: room_number, building   
 - **output**: room_id
 
+#### /api/getRoomsForWing
+- Returns the rooms for a specifi building, floor, and wing
+- **input**: building, floor, wing   
+- **output**: [list of rooms that are in the wing]
 
