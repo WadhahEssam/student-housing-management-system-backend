@@ -94,15 +94,11 @@ class RoomController extends Controller
     }
 
     public function getRoomsCount() {
-        return Room::where('student_id', null)->count();
+        return Room::all()->count();
     }
 
     public function getAvailableRoomsCount() {
         return Room::where('student_id', null)->count();
-    }
-
-    public function getRoomForStudent() {
-        return Room::where('student_id', auth()->user()->id)->get()->first();
     }
 
     public function getStudentForRoom(Request $request) {

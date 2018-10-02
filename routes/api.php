@@ -19,5 +19,4 @@ Route::post('/getRoomID', 'RoomController@getRoomID');
 Route::post('/getRoomsForWing', 'RoomController@getRoomsForWing');
 Route::post('/getRoomsCount', 'RoomController@getRoomsCount');
 Route::post('/getAvailableRoomsCount', 'RoomController@getAvailableRoomsCount');
-Route::post('/getRoomForStudent', 'RoomController@getRoomForStudent');
 Route::post('/getStudentForRoom', 'RoomController@getStudentForRoom');
