@@ -111,4 +111,4 @@ Here are all the API functions with their inputs and outputs and what they exacl
 #### /api/getComplaintsForStudent
 - Returns all the complaints submitted by the logged in student
 - **input**: token
-- **output**: title, description, student_id, replay, stutus, created_at
+- **output**: [list of complaints]
