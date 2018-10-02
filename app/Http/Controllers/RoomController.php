@@ -11,7 +11,7 @@ class RoomController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['getAllRooms', 'getRoomID', 'getRoomInfo']]);
+        $this->middleware('auth:api', ['except' => ['getAllRooms', 'getRoomID', 'getRoomInfo', 'getRoomsForWing']]);
     }
 
     public function getAllRooms() {
@@ -68,10 +68,19 @@ class RoomController extends Controller
 
     public function getRoomID(Request $request) {
         return Room::where([
-                ['building','=',$request->building],
-                ['room_number','=',$request->room_number],
+                ['building','=', $request->building],
+                ['room_number','=', $request->room_number],
             ])
             ->get()->first()->id;
+    }
+
+    public function getRoomsForWing(Request $request) {
+        return Room::where([
+            ['building','=', $request->building],
+            ['floor','=', $request->floor],
+            ['wing', '=', $request->wing]
+        ])
+        ->get()->all();
     }
 
 }
