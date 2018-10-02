@@ -11,7 +11,17 @@ class RoomController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['getAllRooms', 'getRoomID', 'getRoomInfo', 'getRoomsForWing']]);
+        $this->middleware('auth:api', [
+                'except' => [
+                    'getAllRooms',
+                    'getRoomID',
+                    'getRoomInfo',
+                    'getRoomsForWing',
+                    'getRoomsCount',
+                    'getAvailableRoomsCount',
+                    'getStudentForRoom'
+                ]
+            ]);
     }
 
     public function getAllRooms() {
@@ -81,6 +91,28 @@ class RoomController extends Controller
             ['wing', '=', $request->wing]
         ])
         ->get()->all();
+    }
+
+    public function getRoomsCount() {
+        return Room::where('student_id', null)->count();
+    }
+
+    public function getAvailableRoomsCount() {
+        return Room::where('student_id', null)->count();
+    }
+
+    public function getRoomForStudent() {
+        return Room::where('student_id', auth()->user()->id)->get()->first();
+    }
+
+    public function getStudentForRoom(Request $request) {
+        $student = Room::where('id', $request->room_id)->get()->first()->student;
+        if(isset($student)) {
+            return $student;
+        }
+        else {
+            return 'No student for this room';
+        }
     }
 
 }
