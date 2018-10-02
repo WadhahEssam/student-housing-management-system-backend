@@ -76,3 +76,17 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: building, floor, wing   
 - **output**: [list of rooms that are in the wing]
 
+#### /api/getRoomsCount
+- Returns the number of all rooms in the dorm
+- **input**: [nothing]  
+- **output**: [number]
+
+#### /api/getAvailableRoomsCount
+- Returns the number of empty rooms in the dorm
+- **input**: [nothing]
+- **output**: [number]
+
+#### /api/getStudentForRoom
+- Returns the student of the given room  
+- **input**: room_id
+- **output**: id, name, emaill, created_at
