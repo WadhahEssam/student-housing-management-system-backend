@@ -11,7 +11,7 @@ class CreateComplaintsTable extends Migration
         Schema::create('complaints', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->text('replay')->nullable();
             $table->enum('status', ['closed','open'])->default('open');
             $table->unsignedInteger('student_id');

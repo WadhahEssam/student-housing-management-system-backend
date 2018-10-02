@@ -22,3 +22,7 @@ Route::post('/getAvailableRoomsCount', 'RoomController@getAvailableRoomsCount');
 Route::post('/getStudentForRoom', 'RoomController@getStudentForRoom');
 
 // Complaints
+Route::post('/getAllComplaints', 'ComplaintController@getAllComplaints');
+Route::post('/createComplaint', 'ComplaintController@createComplaint');
+Route::post('/closeComplaint', 'ComplaintController@closeComplaint');
+Route::post('/getComplaintsForStudent', 'ComplaintController@getComplaintsForStudent');

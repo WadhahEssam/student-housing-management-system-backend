@@ -16,15 +16,16 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function test() {
-        
+
     }
 
-    public function createStudentAccount( Request $request ) {
-        $newUser = new User() ;
+    public function createStudentAccount(Request $request) {
+        $newUser = new User();
         $newUser->name = $request->name;
         $newUser->password = Hash::make($request->password);
         $newUser->email = $request->email;
         $newUser->save();
         return $newUser;
     }
+
 }
