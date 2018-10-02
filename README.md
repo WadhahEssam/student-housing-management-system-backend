@@ -85,3 +85,8 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - Returns the number of empty rooms in the dorm
 - **input**: [nothing]
 - **output**: [number]
+
+#### /api/getStudentForRoom
+- Returns the student of the given room  
+- **input**: room_id
+- **output**: id, name, emaill, created_at
