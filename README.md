@@ -91,7 +91,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: room_id
 - **output**: id, name, emaill, created_at
 
-## Rooms 
+## Complaints 
 
 #### /api/getAllComplaints
 - Returns all the complaints in the database
@@ -106,4 +106,9 @@ Here are all the API functions with their inputs and outputs and what they exacl
 #### /api/closeComplaint
 - Marks the complaint status as closed, and sets a replay if available, and returns the updated complaint
 - **input**: complaint_id
+- **output**: title, description, student_id, replay, stutus, created_at
+
+#### /api/getComplaintsForStudent
+- Returns all the complaints submitted by the logged in student
+- **input**: token
 - **output**: title, description, student_id, replay, stutus, created_at
