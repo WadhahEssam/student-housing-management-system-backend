@@ -7,10 +7,8 @@ class DatabaseSeeder extends Seeder
 
     public function run()
     {
-
         $this->fillRooms();
         $this->fillStudents();
-
     }
 
     private function fillRooms() {
@@ -91,9 +89,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'email'=> '435100900@student.ksu.edu.sa',
+            'email'=> '435108342@student.ksu.edu.sa',
             'name'=> 'Mohammed Ganem',
-            'password'=> Hash::make('112233'),
+            'password'=> Hash::make('1234567'),
         ]);
     }
 
