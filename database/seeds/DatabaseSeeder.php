@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('users')->insert([
             'email'=> 'test',
-            'name'=> 'Mohammed Ganem',
+            'name'=> 'test',
             'password'=> Hash::make('test'),
         ]);
     }
