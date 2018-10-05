@@ -78,10 +78,10 @@ class RoomController extends Controller
 
     public function getRoomID(Request $request) {
         return Room::where([
-                ['building','=', $request->building],
-                ['room_number','=', $request->room_number],
-            ])
-            ->get()->first()->id;
+            ['building','=', $request->building],
+            ['room_number','=', $request->room_number],
+        ])
+        ->get()->first()->id;
     }
 
     public function getRoomsForWing(Request $request) {
