@@ -58,7 +58,6 @@ class DatabaseSeeder extends Seeder
     }
 
     private function getRoomNumber($floor, $wing, $room) {
-
         switch($wing) {
             case 1:
                 break;
