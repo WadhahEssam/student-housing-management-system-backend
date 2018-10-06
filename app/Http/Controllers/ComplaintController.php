@@ -13,6 +13,7 @@ class ComplaintController extends Controller
                 'except' => [
                     'getAllComplaints',
                     'closeComplaint',
+                    'replayToComplaint',
                 ]
             ]);
     }
@@ -33,6 +34,14 @@ class ComplaintController extends Controller
     public function closeComplaint(Request $request) {
         $complaint = Complaint::find($request->complaint_id);
         $complaint->status = 'closed';
+        $complaint->save();
+        return $complaint;
+    }
+    
+    public function replayToComplaint(Request $request) {
+        $complaint = Complaint::find($request->complaint_id);
+        $complaint->replay = $request->replay;
+        $complaint->save();
         return $complaint;
     }
 

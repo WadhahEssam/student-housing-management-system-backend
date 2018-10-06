@@ -25,4 +25,5 @@ Route::post('/getStudentForRoom', 'RoomController@getStudentForRoom');
 Route::post('/getAllComplaints', 'ComplaintController@getAllComplaints');
 Route::post('/createComplaint', 'ComplaintController@createComplaint');
 Route::post('/closeComplaint', 'ComplaintController@closeComplaint');
+Route::post('/replayToComplaint', 'ComplaintController@replayToComplaint');
 Route::post('/getComplaintsForStudent', 'ComplaintController@getComplaintsForStudent');
