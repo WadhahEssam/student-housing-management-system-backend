@@ -99,7 +99,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 ## Complaints 
 
 #### /api/getAllComplaints
-- Returns all the complaints in the database
+- Returns all the complaints in the database each with an object that holds information about the room 
 - **input**: [nothing]
 - **output**: [list of complaints]
 
