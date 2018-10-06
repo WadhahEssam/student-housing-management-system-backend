@@ -20,8 +20,13 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **output**: token
 
 #### /api/getInfo
-- Returns information about the student   
+- Returns information about the logged in student   
 - **input**: token  
+- **output**: id, name, emaill, created_at  
+
+#### /api/getInfoByID
+- Returns information about a student by passing his ID ( used for admin ) 
+- **input**: student_id  
 - **output**: id, name, emaill, created_at  
 
 #### /api/refresh
