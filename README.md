@@ -108,7 +108,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: complaint_id
 - **output**: title, description, student_id, replay, stutus, created_at
 
-#### /api/replytoComplaint
+#### /api/replaytoComplaint
 - Sets a reply for a given complaint id
 - **input**: complaint_id
 - **output**: title, description, student_id, replay, stutus, created_at
