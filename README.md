@@ -20,8 +20,13 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **output**: token
 
 #### /api/getInfo
-- Returns information about the student   
+- Returns information about the logged in student   
 - **input**: token  
+- **output**: id, name, emaill, created_at  
+
+#### /api/getInfoByID
+- Returns information about a student by passing his ID ( used for admin ) 
+- **input**: student_id  
 - **output**: id, name, emaill, created_at  
 
 #### /api/refresh
@@ -94,7 +99,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 ## Complaints 
 
 #### /api/getAllComplaints
-- Returns all the complaints in the database
+- Returns all the complaints in the database each with an object that holds information about the room 
 - **input**: [nothing]
 - **output**: [list of complaints]
 
@@ -108,7 +113,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: complaint_id
 - **output**: title, description, student_id, replay, stutus, created_at
 
-#### /api/replytoComplaint
+#### /api/replaytoComplaint
 - Sets a reply for a given complaint id
 - **input**: complaint_id
 - **output**: title, description, student_id, replay, stutus, created_at
