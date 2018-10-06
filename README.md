@@ -104,9 +104,15 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **output**: title, description, student_id, replay, stutus, created_at
 
 #### /api/closeComplaint
-- Marks the complaint status as closed, and sets a replay if available, and returns the updated complaint
+- Marks the complaint status as closed, and returns the updated complaint
 - **input**: complaint_id
 - **output**: title, description, student_id, replay, stutus, created_at
+
+#### /api/replytoComplaint
+- Sets a reply for a given complaint id
+- **input**: complaint_id
+- **output**: title, description, student_id, replay, stutus, created_at
+
 
 #### /api/getComplaintsForStudent
 - Returns all the complaints submitted by the logged in student
