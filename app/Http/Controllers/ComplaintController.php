@@ -32,8 +32,7 @@ class ComplaintController extends Controller
 
     public function closeComplaint(Request $request) {
         $complaint = Complaint::find($request->complaint_id);
-        $complaint->status = 'close';
-        $complaint->replay = $request->replay;
+        $complaint->status = 'closed';
         return $complaint;
     }
 
