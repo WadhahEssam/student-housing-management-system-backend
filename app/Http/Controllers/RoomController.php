@@ -19,7 +19,8 @@ class RoomController extends Controller
                     'getRoomsForWing',
                     'getRoomsCount',
                     'getAvailableRoomsCount',
-                    'getStudentForRoom'
+                    'getStudentForRoom',
+                    'getRoomForStudent',
                 ]
             ]);
     }

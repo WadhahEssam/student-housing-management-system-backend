@@ -19,7 +19,7 @@ class ComplaintController extends Controller
     }
 
     public function getAllComplaints() {
-        return Complaint::all();
+        return Complaint::with('student')->get();
     }
 
     public function createComplaint(Request $request) {

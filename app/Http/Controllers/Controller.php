@@ -27,5 +27,9 @@ class Controller extends BaseController
         $newUser->save();
         return $newUser;
     }
+    
+    public function getInfoByID(Request $request) {
+        return User::find($request->student_id);
+    }
 
 }
