@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
 
     private function fillRooms() {
         // looping throw the buildings
-        for($b = 1; $b <= 2; $b++) {
+        for($b = 1; $b <= 30; $b++) {
             // looping throw the floors
             for($f = 1; $f <= 5; $f++) {
                 // if floor is 5
