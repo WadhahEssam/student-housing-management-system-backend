@@ -100,7 +100,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 
 #### /api/createComplaint
 - Creates complaint for the logged in user 
-- **input**: token, title, description, student_id
+- **input**: token, title, description
 - **output**: title, description, student_id, replay, stutus, created_at
 
 #### /api/closeComplaint
