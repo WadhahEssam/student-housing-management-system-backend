@@ -12,8 +12,8 @@ class CreateMaintenanceRequestsTable extends Migration
         Schema::create('maintenance_requests', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('description');
-            $table->enum('status', ['closed', 'open', 'in_process']);
+            $table->text('description')->nullable();
+            $table->enum('status', ['closed', 'open', 'in_process'])->nullable();
             $table->enum('type', ['electricity', 'plumbing', 'carpentry']);
             $table->unsignedInteger('student_id');
             $table->foreign('student_id')->references('id')->on('users');

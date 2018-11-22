@@ -26,6 +26,10 @@ class User extends Authenticatable implements JWTSubject
     public function complaints() {
         return $this->hasMany('App\Complaint', 'student_id', 'id');
     }
+    
+    public function maintenance_requests() {
+        return $this->hasMany('App\MaintenanceRequest', 'student_id', 'id');
+    }
 
     public function getJWTIdentifier()
     {
