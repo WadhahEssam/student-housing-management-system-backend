@@ -30,5 +30,6 @@ Route::post('/replayToComplaint', 'ComplaintController@replayToComplaint');
 Route::post('/getComplaintsForStudent', 'ComplaintController@getComplaintsForStudent');
 
 // MaintenanceRequests
-Route::post('/test', 'MaintenanceRequestController@test');
+Route::post('/getAllMaintenanceRequests', 'MaintenanceRequestController@getAllMaintenanceRequests');
 Route::post('/createMaintenanceRequest', 'MaintenanceRequestController@createMaintenanceRequest');
+Route::post('/closeMaintenanceRequest', 'MaintenanceRequestController@closeMaintenanceRequest');
