@@ -33,3 +33,5 @@ Route::post('/getComplaintsForStudent', 'ComplaintController@getComplaintsForStu
 Route::post('/getAllMaintenanceRequests', 'MaintenanceRequestController@getAllMaintenanceRequests');
 Route::post('/createMaintenanceRequest', 'MaintenanceRequestController@createMaintenanceRequest');
 Route::post('/closeMaintenanceRequest', 'MaintenanceRequestController@closeMaintenanceRequest');
+Route::post('/getMaintenanceRequestsForStudent', 'MaintenanceRequestController@getMaintenanceRequestsForStudent');
+Route::post('/setMaintenanceRequestAsInProcess', 'MaintenanceRequestController@setMaintenanceRequestAsInProcess');

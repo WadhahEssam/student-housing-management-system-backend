@@ -13,7 +13,7 @@ class CreateMaintenanceRequestsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('description')->nullable();
-            $table->enum('status', ['closed', 'open', 'in_process'])->nullable();
+            $table->enum('status', ['closed', 'open', 'in_process'])->default('open');
             $table->enum('type', ['electricity', 'plumbing', 'carpentry']);
             $table->unsignedInteger('student_id');
             $table->foreign('student_id')->references('id')->on('users');
