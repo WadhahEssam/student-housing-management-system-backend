@@ -94,7 +94,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 ## Complaints 
 
 #### /api/getAllComplaints
-- Returns all the complaints in the database each with an object that holds information about the room 
+- Returns all the complaints in the database each with an object that holds information about the student who has submitted the complaint. 
 - **input**: [nothing]
 - **output**: [list of complaints]
 
@@ -118,3 +118,32 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - Returns all the complaints submitted by the logged in student
 - **input**: token
 - **output**: [list of complaints]
+
+## Maintenance Requests
+
+#### /api/getAllMaintenanceRequests
+- Returns all the maintenance requests in the database each with an object that holds the information about the student who has submitted the request.
+- **input**: [nothing]
+- **output**: [list of maintenance requests]
+
+#### /api/createMaintenanceRequest
+- Creates a new maintenance requests for the logged in user
+- **input**: token, title, description, type
+- **output**: the newly added object
+
+#### /api/closeMaintenanceRequest
+- Changes the requst status to "closed"
+- **input**: complaint_id
+- **output**: the changed object
+
+#### /api/setMaintenanceRequestAsInProcess
+- Changes the state of maintenance request to "in_process"
+- **input**: complaint_id
+- **output**: the changed object
+
+#### /api/getMaintenanceRquestsForStudent
+- Returns all the maintenance requests submitted by the logged in student
+- **input**: token
+- **output**: [list of maintenance requests]
+
+
