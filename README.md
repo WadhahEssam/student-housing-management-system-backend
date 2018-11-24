@@ -141,7 +141,7 @@ Here are all the API functions with their inputs and outputs and what they exacl
 - **input**: complaint_id
 - **output**: the changed object
 
-#### /api/getMaintenanceRquestsForStudent
+#### /api/getMaintenanceRequestsForStudent
 - Returns all the maintenance requests submitted by the logged in student
 - **input**: token
 - **output**: [list of maintenance requests]
