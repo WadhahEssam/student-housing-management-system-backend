@@ -133,12 +133,12 @@ Here are all the API functions with their inputs and outputs and what they exacl
 
 #### /api/closeMaintenanceRequest
 - Changes the requst status to "closed"
-- **input**: complaint_id
+- **input**: request_id
 - **output**: the changed object
 
 #### /api/setMaintenanceRequestAsInProcess
 - Changes the state of maintenance request to "in_process"
-- **input**: complaint_id
+- **input**: request_id
 - **output**: the changed object
 
 #### /api/getMaintenanceRequestsForStudent
